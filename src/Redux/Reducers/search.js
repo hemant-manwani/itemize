@@ -7,8 +7,8 @@ import {
 
 const INITIAL_STATE = {
   searchTerm: '',
+  fetching: false,
   searchResults: [],
-  searchResultsFetched: false,
 };
 
 export default (state = INITIAL_STATE, { type, payload, error }) => {
@@ -16,22 +16,22 @@ export default (state = INITIAL_STATE, { type, payload, error }) => {
     case SEARCH_FOR_LANGUAGE: {
       return {
         ...state,
+        fetching: true,
         searchResults: [],
-        searchResultsFetched: false,
         searchTerm: payload.searchTerm,
       };
     }
     case SEARCH_FOR_LANGUAGE_FAILED: {
       return {
         ...state,
-        searchResultsFetched: false,
+        fetching: false,
       };
     }
     case SEARCH_FOR_LANGUAGE_SUCCEEDED: {
       return {
         ...state,
+        fetching: false,
         searchResults: payload,
-        searchResultsFetched: true,
       };
     }
     case RESET_SEARCH_RESULTS: {

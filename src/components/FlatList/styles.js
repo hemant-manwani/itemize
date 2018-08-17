@@ -1,8 +1,7 @@
-const styles => {
+const styles = {
   root: {
     width: '100%',
-    maxWidth: 600,
-    backgroundColor: 'lightgrey',
+    padding: '10px, 50px',
   },
 };
 

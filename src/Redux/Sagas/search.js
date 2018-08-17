@@ -15,8 +15,7 @@ function* searchForLanguage({ payload }) {
     );
     const { success, results = [], error } = response;
     if (success) {
-      const languages = results.map(language => language.language_name);
-      yield put(SearchActions.searchForLanguageSucceeded(languages));
+      yield put(SearchActions.searchForLanguageSucceeded(results));
     } else {
       yield put(SearchActions.searchForLanguageFailed(
           new Error(error.info)

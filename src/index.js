@@ -15,6 +15,7 @@ registerServiceWorker();
 
 const RootView = () => (
   <Switch>
+    <Route path="/" name="Root" component={Search} />
     <Route path="/search" name="Search" component={Search} />
   </Switch>
 );

@@ -1,39 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { compose } from 'recompose';
 import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
 import { withStyles } from '@material-ui/core/styles';
 
-import styles form './styles';
+import styles from './styles';
+import FlatListItem from './FlatListItem';
 
 const FlatList = ({
   items,
-  selectedItem,
+  classes,
+  itemKey,
   primaryTextKey,
 }) => (
   <div className={classes.root}>
     <List component="nav">
+      <Divider />
       {
         items.map(
-          item => (
+          (item, index) => (
             <FlatListItem
-              text={item[primaryTextKey]}
+              key={item[itemKey]}
+              text={`${ index + 1 }. ${item[primaryTextKey]}`}
             />
           )
         )
       }
+      <Divider />
     </List>
   </div>
 );
 
 FlatList.defaultProps = {
   items: [],
-  selectedItem: {},
   primaryTextKey: ''
 };
 
 FlatList.propTypes = {
   items: PropTypes.array.isRequired,
-  selectedItem: PropTypes.object.isRequired,
   primaryTextKey: PropTypes.string.isRequired
 };
 

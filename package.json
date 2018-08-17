@@ -20,8 +20,8 @@
     "redux-saga": "^0.16.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "REACT_APP_LANGUAGE_LAYER_API_ACCESS_KEY=33505b7acd732000eadb050d5e692700 react-scripts start",
+    "build": "REACT_APP_LANGUAGE_LAYER_API_ACCESS_KEY=33505b7acd732000eadb050d5e692700 react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }

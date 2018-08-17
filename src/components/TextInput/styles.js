@@ -1,6 +1,6 @@
 const styles = {
   textField: {
-    width: 200,
+    width: 315,
   }
 }
 
