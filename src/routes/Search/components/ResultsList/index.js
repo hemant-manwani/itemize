@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { withStyles } from '@material-ui/core/styles';
 
-import FlatList from 'components/FlatList';
-
 import styles from './styles';
+import FlatList from 'components/FlatList';
 
 const ResultsList = ({
   classes,
-  searchResults
+  searchResults,
 }) => (
   <div className={classes.listWrapper}>
     <FlatList
@@ -21,12 +20,12 @@ const ResultsList = ({
 );
 
 ResultsList.defaultProps = {
-  searchResults: []
+  searchResults: [],
 };
 
 ResultsList.propTypes = {
   classes: PropTypes.object.isRequired,
-  searchResults: PropTypes.array.isRequired
+  searchResults: PropTypes.array.isRequired,
 };
 
 const enhancer = compose(

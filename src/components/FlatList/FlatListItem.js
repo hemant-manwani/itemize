@@ -4,7 +4,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
 const FlatListItem = ({
-  text
+  text,
 }) => (
   <ListItem button>
     <ListItemText primary={text} />
@@ -12,7 +12,7 @@ const FlatListItem = ({
 );
 
 FlatListItem.propTypes = {
-  text: PropTypes.string
+  text: PropTypes.string,
 };
 
 export default FlatListItem;

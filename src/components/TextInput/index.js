@@ -10,7 +10,7 @@ const TextInput = ({
   label,
   value,
   classes,
-  onChange
+  onChange,
 }) => (
   <TextField
     label={label}

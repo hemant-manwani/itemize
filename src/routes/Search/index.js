@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { withStyles } from '@material-ui/core/styles';
 import { compose, withHandlers } from 'recompose';
 
-import styles from './styles';
 import Form from './components/Form';
 import Loader from 'components/Loader';
 import Header from 'components/Header';
 import ResultsList from './components/ResultsList'
 import {
   searchForLanguage,
-  resetSearchResults
+  resetSearchResults,
 } from 'Redux/Actions/SearchActions';
 
 const Search = ({
@@ -68,15 +66,14 @@ const mapStateToProps = ({
 
 const mapDispatchToProps = {
   searchForLanguage,
-  resetSearchResults
+  resetSearchResults,
 };
 
 const enhancer = compose(
-  withStyles(styles),
   connect(mapStateToProps, mapDispatchToProps),
   withHandlers({
     onSearchClick: ({
-      searchForLanguage
+      searchForLanguage,
     }) => text => {
       searchForLanguage(text);
     }

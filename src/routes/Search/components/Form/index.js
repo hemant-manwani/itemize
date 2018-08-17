@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { compose, withState, withHandlers } from 'recompose';
 
+import styles from './styles';
 import Button from 'components/Button';
 import TextInput from 'components/TextInput';
-
-import styles from './styles';
 
 const SearchForm = ({
   classes,
@@ -45,7 +44,7 @@ const SearchForm = ({
 );
 
 SearchForm.defaultProps = {
-  searchTerm: ''
+  searchTerm: '',
 };
 
 SearchForm.propTypes = {
@@ -62,7 +61,7 @@ const enhancer = compose(
   withHandlers({
     onResetForm: ({
       resetForm,
-      setSearchText
+      setSearchText,
     }) => () => {
       resetForm();
       setSearchText('');

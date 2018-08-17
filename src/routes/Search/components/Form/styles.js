@@ -9,10 +9,10 @@ const styles = {
   },
   searchButton: {
     width: 150,
-    marginRight: 15
+    marginRight: 15,
   },
   resetButton: {
-    width: 150
+    width: 150,
   }
 }
 

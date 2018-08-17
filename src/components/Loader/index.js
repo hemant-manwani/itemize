@@ -11,7 +11,7 @@ const Loader = ({
   size,
   color,
   classes,
-  customClass
+  customClass,
 }) => (
   <div className={classes.loader}>
     <CircularProgress

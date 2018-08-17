@@ -34,12 +34,12 @@ const FlatList = ({
 
 FlatList.defaultProps = {
   items: [],
-  primaryTextKey: ''
+  primaryTextKey: '',
 };
 
 FlatList.propTypes = {
   items: PropTypes.array.isRequired,
-  primaryTextKey: PropTypes.string.isRequired
+  primaryTextKey: PropTypes.string.isRequired,
 };
 
 const enhancer = compose(
