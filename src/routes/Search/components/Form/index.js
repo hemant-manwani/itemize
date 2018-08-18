@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { compose, withState, withHandlers } from 'recompose';
 
-import styles from './styles';
 import Button from 'components/Button';
 import TextInput from 'components/TextInput';
+import styles from './styles';
 
 const SearchForm = ({
   classes,
@@ -17,11 +17,11 @@ const SearchForm = ({
   <div className={classes.main}>
     <div className={classes.inputWrapper}>
       <TextInput
-        label='Search'
+        label="Search"
         value={searchText}
-        onChange={(e) => setSearchText(e.target.value)}
+        onChange={e => setSearchText(e.target.value)}
       />
-    </div>  
+    </div>
     <div className={classes.buttonsWrapper}>
       <Button
         size="small"
@@ -39,8 +39,8 @@ const SearchForm = ({
         onClick={onResetForm}
         buttonClass={classes.resetButton}
       />
-    </div> 
-  </div>  
+    </div>
+  </div>
 );
 
 SearchForm.defaultProps = {
@@ -65,7 +65,7 @@ const enhancer = compose(
     }) => () => {
       resetForm();
       setSearchText('');
-    }
+    },
   })
 );
 

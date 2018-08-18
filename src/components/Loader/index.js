@@ -19,7 +19,7 @@ const Loader = ({
       color={color}
       className={classnames(classes.progress, customClass)}
     />
-  </div>  
+  </div>
 );
 
 Loader.propTypes = {

@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose, withHandlers } from 'recompose';
 
-import Form from './components/Form';
 import Loader from 'components/Loader';
 import Header from 'components/Header';
-import ResultsList from './components/ResultsList'
 import {
   searchForLanguage,
-  resetSearchResults,
+  resetSearchResults
 } from 'Redux/Actions/SearchActions';
+import ResultsList from './components/ResultsList';
+import Form from './components/Form';
 
 const Search = ({
   showLoader,
@@ -21,28 +21,32 @@ const Search = ({
   resetSearchResults,
 }) => (
   <div>
-    <Header title='Language Detector'/>
+    <Header title="Language Detector" />
     <Form
       searchTerm={searchTerm}
       onSubmit={onSearchClick}
       resetForm={resetSearchResults}
     />
     {
-      searchResults.length ?
-      <ResultsList
-        searchResults={searchResults}
-      />
-      : null
+      searchResults.length
+        ? (
+          <ResultsList
+            searchResults={searchResults}
+          />
+        )
+        : null
     }
     {
-      fetchingResults ?
-      <Loader
-        size={50}
-        color="primary"
-      /> :
-      null
+      fetchingResults
+        ? (
+          <Loader
+            size={50}
+            color="primary"
+          />
+        )
+        : null
     }
-  </div>  
+  </div>
 );
 
 Search.propTypes = {
@@ -57,7 +61,7 @@ const mapStateToProps = ({
     fetching,
     searchTerm,
     searchResults,
-  }
+  },
 }) => ({
   searchTerm,
   searchResults,
@@ -74,10 +78,10 @@ const enhancer = compose(
   withHandlers({
     onSearchClick: ({
       searchForLanguage,
-    }) => text => {
+    }) => (text) => {
       searchForLanguage(text);
-    }
-  }),
+    },
+  })
 );
 
 export default enhancer(Search);

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { withStyles } from '@material-ui/core/styles';
 
-import styles from './styles';
 import FlatList from 'components/FlatList';
+import styles from './styles';
 
 const ResultsList = ({
   classes,
@@ -16,7 +16,7 @@ const ResultsList = ({
       itemKey="language_code"
       primaryTextKey="language_name"
     />
-  </div>  
+  </div>
 );
 
 ResultsList.defaultProps = {

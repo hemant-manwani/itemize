@@ -2,7 +2,7 @@ import createSagaMiddleware from 'redux-saga';
 import { createStore, applyMiddleware } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { browserHistory } from '../';
+import { browserHistory } from '..';
 
 import reducers from './Reducers';
 import sagas from './Sagas';
@@ -18,8 +18,8 @@ export default () => {
     )
   );
   const store = createStore(reducers, {}, enhancer);
-  
+
   sagaMiddleware.run(sagas);
-  
+
   return store;
 };

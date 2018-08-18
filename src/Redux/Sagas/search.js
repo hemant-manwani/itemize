@@ -1,7 +1,7 @@
 import {
   put,
   call,
-  takeLatest,
+  takeLatest
 } from 'redux-saga/effects';
 import { Api } from 'Service';
 
@@ -18,8 +18,8 @@ function* searchForLanguage({ payload }) {
       yield put(SearchActions.searchForLanguageSucceeded(results));
     } else {
       yield put(SearchActions.searchForLanguageFailed(
-          new Error(error.info)
-        )
+        new Error(error.info)
+      )
       );
     }
   } catch (err) {

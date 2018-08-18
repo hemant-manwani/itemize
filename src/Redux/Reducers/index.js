@@ -5,5 +5,5 @@ import search from './search';
 
 export default combineReducers({
   search,
-  router: routerReducer
+  router: routerReducer,
 });

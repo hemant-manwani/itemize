@@ -1,5 +1,5 @@
 import * as SearchTypes from './SearchTypes';
 
 export default {
-  SearchTypes
+  SearchTypes,
 };

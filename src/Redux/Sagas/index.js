@@ -5,6 +5,6 @@ import search from './search';
 
 export default function* rootSaga() {
   yield [
-    fork(search)
+    fork(search),
   ];
 }

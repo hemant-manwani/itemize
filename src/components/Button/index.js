@@ -32,27 +32,33 @@ const ButtonWithIcon = ({
       className={classNames(classes.button, buttonClass)}
     >
       {
-        textFirst ?
-        <div className={classNames(classes.text, textClass)}>
-          { text }
-        </div> :
-        null
+        textFirst
+          ? (
+            <div className={classNames(classes.text, textClass)}>
+              { text }
+            </div>
+          )
+          : null
       }
       {
-        iconName ?
-        <Icon
-          className={classNames(classes.icon, iconClass)}
-        >
-          {iconName}
-        </Icon> :
-        null
+        iconName
+          ? (
+            <Icon
+              className={classNames(classes.icon, iconClass)}
+            >
+              {iconName}
+            </Icon>
+          )
+          : null
       }
       {
-        iconFirst ?
-        <div className={classNames(classes.text, textClass)}>
-          { text }
-        </div> :
-        null
+        iconFirst
+          ? (
+            <div className={classNames(classes.text, textClass)}>
+              { text }
+            </div>
+          )
+          : null
       }
     </Button>
   </div>

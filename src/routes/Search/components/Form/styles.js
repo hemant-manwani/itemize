@@ -13,7 +13,7 @@ const styles = {
   },
   resetButton: {
     width: 150,
-  }
-}
+  },
+};
 
 export default styles;

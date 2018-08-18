@@ -12,7 +12,7 @@ import styles from './styles';
 
 const Header = ({
   title,
-  classes
+  classes,
 }) => (
   <div className={classes.root}>
     <AppBar position="static">
@@ -33,7 +33,7 @@ const Header = ({
         </Typography>
       </Toolbar>
     </AppBar>
-  </div>  
+  </div>
 );
 
 Header.propTypes = {
@@ -46,4 +46,3 @@ const enhancer = compose(
 );
 
 export default enhancer(Header);
-

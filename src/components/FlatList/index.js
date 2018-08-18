@@ -22,7 +22,7 @@ const FlatList = ({
           (item, index) => (
             <FlatListItem
               key={item[itemKey]}
-              text={`${ index + 1 }. ${item[primaryTextKey]}`}
+              text={`${index + 1}. ${item[primaryTextKey]}`}
             />
           )
         )

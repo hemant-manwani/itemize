@@ -4,7 +4,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
-  }
+  },
 };
 
 export default styles;
