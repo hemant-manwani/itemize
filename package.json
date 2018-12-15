@@ -11,7 +11,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "2.0.4"
   },
   "dependencies": {
     "@material-ui/core": "^1.5.0",
@@ -31,8 +31,8 @@
     "redux-saga": "^0.16.0"
   },
   "scripts": {
-    "start": "REACT_APP_LANGUAGE_LAYER_API_ACCESS_KEY=33505b7acd732000eadb050d5e692700 react-scripts start",
-    "build": "REACT_APP_LANGUAGE_LAYER_API_ACCESS_KEY=33505b7acd732000eadb050d5e692700 react-scripts build",
+    "start": "REACT_APP_LANGUAGE_LAYER_API_ACCESS_KEY=4ca342293c684c7b7dd59a7ac722e3b3 react-scripts start",
+    "build": "REACT_APP_LANGUAGE_LAYER_API_ACCESS_KEY=4ca342293c684c7b7dd59a7ac722e3b3 react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint .",
